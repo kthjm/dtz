@@ -34,14 +34,25 @@ describe(`src`, () => {
 
    describe(`use in code`, () => {
       describe(`success`, () => {
-         const expectZip = {
-            files: {
-               'foo\\bar.png': `buffer`,
-               'foo\\bar.jpg': `buffer`,
-               'foo\\bar.svg': `buffer`,
-               'foo\\bar.md': `buffer`
-            }
-         }
+         const os = process.env.OS
+         const expectZip =
+            os && os.toLowerCase().includes(`windows`)
+               ? {
+                    files: {
+                       'foo\\bar.png': `buffer`,
+                       'foo\\bar.jpg': `buffer`,
+                       'foo\\bar.svg': `buffer`,
+                       'foo\\bar.md': `buffer`
+                    }
+                 }
+               : {
+                    files: {
+                       'foo/bar.png': `buffer`,
+                       'foo/bar.jpg': `buffer`,
+                       'foo/bar.svg': `buffer`,
+                       'foo/bar.md': `buffer`
+                    }
+                 }
 
          it(`source is relative`, async () => {
             const result = await dtz(sourceRelative)

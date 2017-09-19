@@ -3,11 +3,12 @@ node_js:
 - '8'
 after_success:
 - yarn coverage
-# deploy:
-#   provider: npm
-#   email: toxictoxer@gmail.com
-#   api_key:
-#     secure: Xk9Iq3bA3u9+Tg5SCgKScLd6+5RgYOLWdCDK8G6TamBg7pDKtf+0U74P3FierKomqLf2RSbMbzHJcVBRG17r3uCj8t5SVs8C0TO41gmUh/wZRqml5amikp1TtDyL+GqJ2HR/uGjqNlZttGKPCcvPAt5arMMR9Zu6AKFZIy2Sz1i5Vhb0RSi9sYdhY5FSn6IohkYR+WuH8HuN7PmhJp14BdIZDAFJPfa1w9KM5se5M2d4IoABuARAGAWtV8zFPDaAjQjGSgMSXU9mRzrk5K4HiKTQrYNtkdWc7hJniD+E0dEnoPGGiIQG6cUHyk9zSqLc+NbFJq8OO4zxclFuZCiho5NQ/t10PHp5ZfH3FMzYdtZzuBcIOI2ykmYUjQ71m+tUFJgx/mHj6H/cc6fNFUVFH/7WZWM61lcW3EV12rolC5yD4YPYyZIuqQtmJyDoRVvxeP3IbcoIiBHGUPr/VHPP08pNMSfLgF2aX1od/NV3dSRitb2NeDF/9U99rrwq9lJX/fd7nF0/NEvadOYZL1c5/Ifzvp1UuqcBXFKj81js8edq4j8Uh3WuDv1tw48U9M49tFDsTBgmDZhutJp6loPhGAnPZlEe95CoRBhHG4DcJSqOUeJyniGIscAkV49OEdPbsWV6rr/Jk2PI3pNX+0ZP/bV+7O/qGVg+OzQOtFL6Cr4=
-#   on:
-#     tags: true
-#     repo: kthjm/tetsuo
+deploy:
+  provider: npm
+  email: toxictoxer@gmail.com
+  api_key:
+    secure: VzEnB8CHuHE7qAXnuWwbS5BsAkVjrnoJQBJwHlrhjERsnaCJkg93l4Bac+abUtR96cuWSPfqlCtQCN1wvix/oaJ/MnpA24f57BI35QKNRmIhWxFpFW5D4sLhkTQkcJBqUn91K8CAR+/FUoJgIXXnMWbezNqDU6lQ6Guf8Scnt8yP9L6iabkrawenpjm8XY4b5EjDQyesxPUEIZOuK7z/Zb3kcpPxXwZN+z4GOnQpnA2G3Np7ID/NegZ7TI8IrpRtRzCpo+qEvKUBJpuvfwhbzzFNO9xR0iA6e4cIvRSL4uxJhKCE1LmFnQR4nJOUsu8ufZbLduCLAXIso6sAoFVDBTqzygSRMgoEI7SGYqERGQSNkhpw7DspaMHzIddJiQWJIOYeqrd2auzzIa06G5Aq9PJk2v0Q8tgTgB7K7HJYQhF5RJk7Q37edywz2xozjNYtToQIQQW66C6CYs4fc0A4D8SJe13lZcOR/SFSCJ+aCIdP18M8HgbE/Dercwv9A4Rwh1FqyUzg9KQrPHjVvr/YekTmT9vwa6vfuMUqRJZniF6XBMXyDS//UDeI3y/MQgON6fGnqBmiYgvWv7cBgPFqnbzGlkqTieeZWi9lglSl6D11aXe4S+qNBcC3FWzqOcGTv43gHT5KRP5ge0UL03wn3VhB94INCAPZRBShVR1n2Vc=
+  on:
+    tags: true
+    repo: kthjm/dtz
+    branch: publish

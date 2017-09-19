@@ -1,79 +1,72 @@
 # dtz
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![Build Status](https://travis-ci.org/kthjm/dtz.svg?branch=master)](https://travis-ci.org/kthjm/dtz)
+[![Coverage Status](https://coveralls.io/repos/github/kthjm/dtz/badge.svg)](https://coveralls.io/github/kthjm/dtz)
 
+[`recursive-readdir`](https://github.com/jergason/recursive-readdir) + [`jszip`](https://github.com/Stuk/jszip)
 
-## API
+zip up a directory manipulated by cli/promise (and callback).
+
+## Usage
 
 ### CLI
 ```shell
-Usage:
+Usage: dtz src [-o|--out-file] [-i|--ignores] [-v|--verbose]
 
+Options:
+  -o, --out-file  dest zip path
+  -i, --ignores   ignore filename   [array]
+  -v, --verbose   Show changes      [boolean]
 ```
+When `-o` is empty, zip will be generated next to `src`.
 
 ### Node.js
 ```js
-import dtz from "dtz";
+import dtz from 'dtz';
 
-const dir = "./app";
+const src = `./app`;
 
-dtz(dir).then((res)=>{
-
-})
-
-dtz(dir,[`hoge.png`]).then((res)=>{
-
-});
-
-dtz(dir,[`hoge.png`],(err,res)=>{
+// promise
+dtz(src,[`foo.png`])
+.then(res => res.generateAsync({type: `nodebuffer`}))
+.then(buffer => {
 
 })
 
-dtz(dir,null,(err,res)=>{
-
-})
-
-dtz(dir,[`hoge.png`],"./wfewfwe.zip");
-dtz(dir,[`hoge.png`],true);
-```
-
-### `dtz(dir[, ignores, outFile | callback])`
-
-<!-- ```js
-import dtz from "dtz";
-
-const dir = "./app";
-
-// save to disk
-dtz(dir);
-
-dtz(dir,{
-    ignores: [`hoge.png`]
-});
-
-dtz(dir,{
-    ignores: [`hoge.png`],
-    outFile: "./wfewfwe.zip"
-});
-
-
-// use response
-dtz(dir,{res: true})
-.then((zip)=>{
-    zip.generateAsync()
-})
-.catch((err)=>{
-
-})
-
+// async/await
 (async ()=>{
-    const zip = await dtz(dir,{res: true});
-    zip.generateNodeStream()
+    const jszip = await dtz(src,[`foo.png`]);
+    const stream = res.generateNodeStream()
 })()
 
-dtz(dir,{res: true},(err,zip)=>{
-
+// callback
+dtz(src,[`foo.png`],(err,res)=>{
+    if(err){
+        console.log(err);
+    }else{
+        console.log(res);
+    }
 })
-``` -->
+
+// save to disk
+dtz(src,[`foo.png`],`./bar.zip`) // rename
+.then(() => console.log(`done`))
+
+dtz(src,[`foo.png`],true); // "./app.zip"
+
+```
+
+## API
+
+### `dtz(src[, ignores, callback | outFile])`
+##### `ignores`
+pass to [`recursive-readdir`](https://github.com/jergason/recursive-readdir) as second arg.
+
+##### `outFile`
+When `true`, zip will be generated next to `src`.
+
+##### `res`
+instance of [`jszip`](https://stuk.github.io/jszip/documentation/api_jszip.html).
 
 ## License
 MIT (http://opensource.org/licenses/MIT)
