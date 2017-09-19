@@ -66,7 +66,7 @@ pass to [`recursive-readdir`](https://github.com/jergason/recursive-readdir) as 
 When `true`, zip will be generated next to `src`.
 
 ##### `res`
-`res` is instance of [`jszip`](https://stuk.github.io/jszip/documentation/api_jszip.html).
+instance of [`jszip`](https://stuk.github.io/jszip/documentation/api_jszip.html).
 
 ## License
 MIT (http://opensource.org/licenses/MIT)
