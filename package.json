@@ -7,9 +7,7 @@
    "license": "MIT",
    "repository": "kthjm/dtz",
    "author": "kthjm <toxictoxer@gmail.com>",
-   "keywords": [
-      ""
-   ],
+   "keywords": [""],
    "prettier": {
       "tabWidth": 3,
       "semi": false,
@@ -27,34 +25,20 @@
          ],
          "flow"
       ],
-      "plugins": [
-         "add-module-exports",
-         "array-includes"
-      ],
+      "plugins": ["add-module-exports", "array-includes"],
       "env": {
          "build": {
-            "plugins": [
-               "transform-regenerator"
-            ]
+            "plugins": ["transform-regenerator"]
          },
          "test": {
-            "presets": [
-               "power-assert"
-            ],
-            "plugins": [
-               "istanbul",
-               "rewire"
-            ]
+            "presets": ["power-assert"],
+            "plugins": ["istanbul", "rewire"]
          }
       }
    },
    "nyc": {
-      "require": [
-         "babel-register"
-      ],
-      "include": [
-         "src"
-      ],
+      "require": ["babel-register"],
+      "include": ["src"],
       "sourceMap": false,
       "instrument": false
    },
