@@ -1,7 +1,7 @@
 # dtz
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Build Status](https://travis-ci.org/kthjm/dtz.svg?branch=master)](https://travis-ci.org/kthjm/dtz)
-[![Coverage Status](https://coveralls.io/repos/github/kthjm/dtz/badge.svg)](https://coveralls.io/github/kthjm/dtz)
+[![Coverage Status](https://coveralls.io/repos/github/kthjm/dtz/badge.svg?branch=master)](https://coveralls.io/github/kthjm/dtz?branch=master)
 
 [`recursive-readdir`](https://github.com/jergason/recursive-readdir) + [`jszip`](https://github.com/Stuk/jszip)
 
