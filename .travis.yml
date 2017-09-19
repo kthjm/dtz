@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '8'
+after_success:
+- yarn coverage
+# deploy:
+#   provider: npm
+#   email: toxictoxer@gmail.com
+#   api_key:
+#     secure: Xk9Iq3bA3u9+Tg5SCgKScLd6+5RgYOLWdCDK8G6TamBg7pDKtf+0U74P3FierKomqLf2RSbMbzHJcVBRG17r3uCj8t5SVs8C0TO41gmUh/wZRqml5amikp1TtDyL+GqJ2HR/uGjqNlZttGKPCcvPAt5arMMR9Zu6AKFZIy2Sz1i5Vhb0RSi9sYdhY5FSn6IohkYR+WuH8HuN7PmhJp14BdIZDAFJPfa1w9KM5se5M2d4IoABuARAGAWtV8zFPDaAjQjGSgMSXU9mRzrk5K4HiKTQrYNtkdWc7hJniD+E0dEnoPGGiIQG6cUHyk9zSqLc+NbFJq8OO4zxclFuZCiho5NQ/t10PHp5ZfH3FMzYdtZzuBcIOI2ykmYUjQ71m+tUFJgx/mHj6H/cc6fNFUVFH/7WZWM61lcW3EV12rolC5yD4YPYyZIuqQtmJyDoRVvxeP3IbcoIiBHGUPr/VHPP08pNMSfLgF2aX1od/NV3dSRitb2NeDF/9U99rrwq9lJX/fd7nF0/NEvadOYZL1c5/Ifzvp1UuqcBXFKj81js8edq4j8Uh3WuDv1tw48U9M49tFDsTBgmDZhutJp6loPhGAnPZlEe95CoRBhHG4DcJSqOUeJyniGIscAkV49OEdPbsWV6rr/Jk2PI3pNX+0ZP/bV+7O/qGVg+OzQOtFL6Cr4=
+#   on:
+#     tags: true
+#     repo: kthjm/tetsuo
