@@ -34,6 +34,7 @@ describe(`src`, () => {
 
    describe(`use in code`, () => {
       describe(`success`, () => {
+          console.log(process.env);
          const expectZip = process.env.OS.toLowerCase().includes(`windows`)
          ? {
             files: {
