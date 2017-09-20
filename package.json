@@ -1,14 +1,13 @@
 {
    "name": "dtz",
-   "version": "0.0.1",
+   "version": "0.0.2",
    "main": "lib/index.js",
    "bin": "bin/cli.js",
-   "description":
-      "zip up a directory manipulated by cli/promise (and callback)",
+   "description": "zip a directory manipulated by cli/promise (and callback)",
    "license": "MIT",
    "repository": "kthjm/dtz",
    "author": "kthjm <toxictoxer@gmail.com>",
-   "keywords": ["zip", "dir", "folder"],
+   "keywords": ["zip", "directory", "folder", "promise", "cli"],
    "prettier": {
       "tabWidth": 3,
       "semi": false,
