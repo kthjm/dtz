@@ -5,7 +5,12 @@
 
 [`recursive-readdir`](https://github.com/jergason/recursive-readdir) + [`jszip`](https://github.com/Stuk/jszip)
 
-zip up a directory manipulated by cli/promise (and callback).
+zip a directory manipulated by cli/promise (and callback).
+
+## Installation
+```bash
+yarn add dtz
+```
 
 ## Usage
 

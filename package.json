@@ -3,12 +3,11 @@
    "version": "0.0.1",
    "main": "lib/index.js",
    "bin": "bin/cli.js",
-   "description":
-      "zip up a directory manipulated by cli/promise (and callback)",
+   "description": "zip a directory manipulated by cli/promise (and callback)",
    "license": "MIT",
    "repository": "kthjm/dtz",
    "author": "kthjm <toxictoxer@gmail.com>",
-   "keywords": ["zip", "dir", "folder"],
+   "keywords": ["zip", "promise", "cli", "dir", "folder"],
    "prettier": {
       "tabWidth": 3,
       "semi": false,

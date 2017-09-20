@@ -18,7 +18,7 @@ const argv = yargs
    .describe('v', 'Show changes')
    .parse()
 
-const source = argv._[0]
+const source = argv._[argv._.length - 1]
 dtz(source, argv.ignores, argv.outFile || true, argv.verbose).catch(err =>
    console.error(err)
 )
