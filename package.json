@@ -2,7 +2,7 @@
    "name": "dtz",
    "version": "0.0.2",
    "main": "lib/index.js",
-   "bin": "bin/cli.js",
+   "bin": "bin/dtz.js",
    "description": "zip a directory manipulated by cli/promise (and callback)",
    "license": "MIT",
    "repository": "kthjm/dtz",
@@ -19,7 +19,7 @@
             "env",
             {
                "targets": {
-                  "node": "6"
+                  "node": "8"
                }
             }
          ],
@@ -27,9 +27,6 @@
       ],
       "plugins": ["add-module-exports", "array-includes"],
       "env": {
-         "build": {
-            "plugins": ["transform-regenerator"]
-         },
          "test": {
             "presets": ["power-assert"],
             "plugins": ["istanbul", "rewire"]
@@ -60,7 +57,6 @@
       "babel-plugin-array-includes": "^2.0.3",
       "babel-plugin-istanbul": "^4.1.4",
       "babel-plugin-rewire": "^1.1.0",
-      "babel-plugin-transform-regenerator": "^6.26.0",
       "babel-preset-env": "^1.6.0",
       "babel-preset-flow": "^6.23.0",
       "babel-preset-power-assert": "^1.0.0",
@@ -78,10 +74,9 @@
       "rewire": "^2.5.2"
    },
    "dependencies": {
+      "commander": "^2.11.0",
       "fs-extra": "^4.0.2",
       "jszip": "^3.1.4",
-      "recursive-readdir": "^2.2.1",
-      "regenerator-runtime": "^0.11.0",
-      "yargs": "^9.0.1"
+      "recursive-readdir": "^2.2.1"
    }
 }

@@ -1,6 +1,4 @@
 // @flow
-import regeneratorRuntime from 'regenerator-runtime'
-
 import JSZip from 'jszip'
 import fs from 'fs-extra'
 import { isAbsolute, dirname, basename, extname, resolve } from 'path'
