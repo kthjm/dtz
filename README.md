@@ -16,12 +16,15 @@ yarn add dtz
 
 ### CLI
 ```shell
-Usage: dtz src [-o|--out-file] [-i|--ignores] [-v|--verbose]
+Usage: dtz [options] <src>
 
-Options:
-  -o, --out-file  dest zip path
-  -i, --ignores   ignore filename   [array]
-  -v, --verbose   Show changes      [boolean]
+  Options:
+
+    -V, --version              output the version number
+    -o, --out-file <path>      dest zip path
+    -i, --ignores  <filename>  ignore filenames
+    -v, --verbose
+    -h, --help                 output usage information
 ```
 When `-o` is empty, zip will be generated next to `src`.
 
