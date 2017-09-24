@@ -1,6 +1,6 @@
 {
    "name": "dtz",
-   "version": "0.0.2",
+   "version": "1.0.0",
    "main": "lib/index.js",
    "bin": "bin/dtz.js",
    "description": "zip a directory manipulated by cli/promise (and callback)",
