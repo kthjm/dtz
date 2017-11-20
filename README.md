@@ -1,7 +1,10 @@
 # dtz
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
+[![npm](https://img.shields.io/npm/v/dtz.svg?style=flat-square)](https://www.npmjs.com/package/dtz)
+[![npm](https://img.shields.io/npm/dm/dtz.svg?style=flat-square)](https://www.npmjs.com/package/dtz)
 [![Build Status](https://img.shields.io/travis/kthjm/dtz.svg?style=flat-square)](https://travis-ci.org/kthjm/dtz)
 [![Coverage Status](https://img.shields.io/codecov/c/github/kthjm/dtz.svg?style=flat-square)](https://codecov.io/github/kthjm/dtz)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 [`recursive-readdir`](https://github.com/jergason/recursive-readdir) + [`jszip`](https://github.com/Stuk/jszip)
 
