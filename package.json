@@ -1,80 +1,59 @@
 {
-   "name": "dtz",
-   "version": "1.0.1",
-   "main": "lib",
-   "bin": "bin/dtz.js",
-   "description": "zip a directory manipulated by cli/promise (and callback)",
-   "license": "MIT",
-   "repository": "kthjm/dtz",
-   "author": "kthjm <toxictoxer@gmail.com>",
-   "keywords": ["zip", "directory", "folder", "promise", "cli"],
-   "prettier": {
-      "tabWidth": 3,
-      "semi": false,
-      "singleQuote": true
-   },
-   "babel": {
-      "presets": [
-         [
-            "env",
-            {
-               "targets": {
-                  "node": "8"
-               }
-            }
-         ],
-         "flow"
-      ],
-      "plugins": ["add-module-exports", "array-includes"],
-      "env": {
-         "test": {
-            "presets": ["power-assert"],
-            "plugins": ["istanbul", "rewire"]
-         }
-      }
-   },
-   "nyc": {
-      "require": ["babel-register"],
-      "include": ["src"],
-      "sourceMap": false,
-      "instrument": false
-   },
-   "scripts": {
-      "pretest": "flow",
-      "test": "cross-env NODE_ENV=test nyc mocha",
-      "prebuild": "yarn test",
-      "build": "cross-env NODE_ENV=build babel ./src -d ./lib",
-      "copy": "flow-copy-source ./src ./lib",
-      "format": "prettier --write **/*.js package.json",
-      "postbuild": "run-s format copy",
-      "coverage": "nyc report --reporter=lcov && codecov"
-      "typed": "flow-typed"
-   },
-   "devDependencies": {
-      "babel-cli": "^6.26.0",
-      "babel-plugin-add-module-exports": "^0.2.1",
-      "babel-plugin-array-includes": "^2.0.3",
-      "babel-plugin-istanbul": "^4.1.5",
-      "babel-plugin-rewire": "^1.1.0",
-      "babel-preset-env": "^1.6.1",
-      "babel-preset-flow": "^6.23.0",
-      "babel-preset-power-assert": "^1.0.0",
-      "codecov": "^3.0.0",
-      "cross-env": "^5.1.1",
-      "flow-bin": "^0.59.0",
-      "flow-copy-source": "^1.2.1",
-      "flow-typed": "^2.2.3",
-      "mocha": "^4.0.1",
-      "npm-run-all": "^4.1.2",
-      "nyc": "^11.3.0",
-      "power-assert": "^1.4.4",
-      "prettier": "^1.8.2",
-      "rewire": "^3.0.1"
-   },
-   "dependencies": {
-      "commander": "^2.11.0",
-      "fs-extra": "^4.0.2",
-      "jszip": "^3.1.5",
-      "recursive-readdir": "^2.2.1"
-   }
+  "name": "dtz",
+  "version": "1.0.2",
+  "main": "lib",
+  "bin": "bin/dtz.js",
+  "description": "zip a directory manipulated by cli/promise (and callback)",
+  "license": "MIT",
+  "repository": "kthjm/dtz",
+  "author": "kthjm <toxictoxer@gmail.com>",
+  "keywords": ["zip", "directory", "folder", "promise", "cli"],
+  "prettier": {
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  },
+  "nyc": {
+    "require": ["babel-register"],
+    "include": ["src"],
+    "sourceMap": false,
+    "instrument": false
+  },
+  "scripts": {
+    "pretest": "flow",
+    "test": "cross-env NODE_ENV=test nyc mocha",
+    "prebuild": "yarn test",
+    "build": "cross-env NODE_ENV=build babel src -d lib",
+    "postbuild": "run-s format copy",
+    "format": "prettier --write **/*.js package.json",
+    "copy": "flow-copy-source src lib",
+    "coverage": "nyc report --reporter=lcov && codecov"
+  },
+  "dependencies": {
+    "commander": "^2.11.0",
+    "fs-extra": "^4.0.2",
+    "jszip": "^3.1.5",
+    "recursive-readdir": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-array-includes": "^2.0.3",
+    "babel-plugin-istanbul": "^4.1.5",
+    "babel-plugin-rewire": "^1.1.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-power-assert": "^1.0.0",
+    "codecov": "^3.0.0",
+    "cross-env": "^5.1.1",
+    "flow-bin": "^0.59.0",
+    "flow-copy-source": "^1.2.1",
+    "flow-typed": "^2.2.3",
+    "mocha": "^4.0.1",
+    "npm-run-all": "^4.1.2",
+    "nyc": "^11.3.0",
+    "power-assert": "^1.4.4",
+    "prettier": "^1.8.2",
+    "rewire": "^3.0.1"
+  }
 }

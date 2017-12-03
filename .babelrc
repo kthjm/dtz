@@ -1,0 +1,13 @@
+{
+   "presets": [
+      ["env", { "targets": { "node": "8" } }],
+      "flow"
+   ],
+   "plugins": ["add-module-exports", "array-includes"],
+   "env": {
+      "test": {
+         "presets": ["power-assert"],
+         "plugins": ["istanbul", "rewire"]
+      }
+   }
+}
